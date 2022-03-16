@@ -1,0 +1,182 @@
+[
+    {
+        "model": "birdbox.location",
+        "pk": 1,
+        "fields": {
+            "region": "North America",
+            "state": "Alabama",
+            "country": "United State of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 2,
+        "fields": {
+            "region": "North America",
+            "state": "Tennessee",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 3,
+        "fields": {
+            "region": "North America",
+            "state": "Kentucky",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 4,
+        "fields": {
+            "region": "North America",
+            "state": "Georgia",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 5,
+        "fields": {
+            "region": "North America",
+            "state": "Mississippi",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 6,
+        "fields": {
+            "region": "North America",
+            "state": "North Carolina",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 7,
+        "fields": {
+            "region": "North America",
+            "state": "South Carolina",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 8,
+        "fields": {
+            "region": "North America",
+            "state": "Arkansas",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 9,
+        "fields": {
+            "region": "North America",
+            "state": "Florida",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 10,
+        "fields": {
+            "region": "North America",
+            "state": "Virginia",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 11,
+        "fields": {
+            "region": "North America",
+            "state": "Indiana",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 12,
+        "fields": {
+            "region": "North America",
+            "state": "Illinois",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 13,
+        "fields": {
+            "region": "North America",
+            "state": "Ohio",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 14,
+        "fields": {
+            "region": "North America",
+            "state": "West Virginia",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 15,
+        "fields": {
+            "region": "North America",
+            "state": "Pennsylvania",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 16,
+        "fields": {
+            "region": "North America",
+            "state": "New York",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 17,
+        "fields": {
+            "region": "North America",
+            "state": "New Jersey",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 18,
+        "fields": {
+            "region": "North America",
+            "state": "Delaware",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 19,
+        "fields": {
+            "region": "North America",
+            "state": "Connecticut",
+            "country": "United States of America"
+        }
+    },
+    {
+        "model": "birdbox.location",
+        "pk": 20,
+        "fields": {
+            "region": "North America",
+            "state": "Maine",
+            "country": "United States of America"
+        }
+    }
+]

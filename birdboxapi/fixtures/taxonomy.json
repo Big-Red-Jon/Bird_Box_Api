@@ -1,0 +1,142 @@
+[
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 1,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Bombycillidae",
+            "Genus": "Bombycilla",
+            "Species": "Bombycilla cedrorum Vieillot",
+            "CommonName": "Cedar Waxwing"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 2,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Pelecaniformes",
+            "Family": "Ardeidae",
+            "Genus": "Butorides",
+            "Species": "Butorides virescens",
+            "CommonName": "Green Heron"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 3,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Tyrannidae",
+            "Genus": "Sayornis",
+            "Species": "Sayornis phoebe",
+            "CommonName": "Eastern Phoebe"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 4,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Parulidae",
+            "Genus": "Protonotaria",
+            "Species": "Protonotaria citrea",
+            "CommonName": "Prothonotary Warbler"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 5,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Piciformes",
+            "Family": "Picidae",
+            "Genus": "Dryocopus",
+            "Species": "Dryocopus pileatus",
+            "CommonName": "Pileated Woodpecker"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 6,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Cardinalidae",
+            "Genus": "Cardinalis Bonaparte",
+            "Species": "Cardinalis cardinalis",
+            "CommonName": "Northern Cardinal"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 7,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Turdidae",
+            "Genus": "Turdus",
+            "Species": "Turdus migratorius",
+            "CommonName": "American Robin"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 8,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Turdidae",
+            "Genus": "Turdus",
+            "Species": "Turdus migratorius",
+            "CommonName": "Tricolored Heron"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 9,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Passeriformes",
+            "Family": "Fringillidae",
+            "Genus": "Haemorhous",
+            "Species": "Haemorhous Swainson",
+            "CommonName": "House Finch"
+        }
+    },
+    {
+        "model": "birdbox.taxonomy",
+        "pk": 10,
+        "fields": {
+            "Kingdom": "Animalia",
+            "Phylum": "Chordata",
+            "Class": "Aves",
+            "Order": "Pelecaniformes",
+            "Family": "Ardeidae",
+            "Genus": "Ardea",
+            "Species": "Ardea alba",
+            "CommonName": "Great Egret"
+        }
+    }
+]

@@ -1,0 +1,13 @@
+[
+    {
+        "model": "birdbox.watcher",
+        "pk": 1,
+        "fields": {
+            "user": 1,
+            "profile_image_url": "https://bit.ly/3CJXYw3",
+            "age": "25",
+            "region_id": 1,
+            "created_on": "2010-03-25"
+        }
+    }
+]

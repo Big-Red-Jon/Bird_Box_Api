@@ -1,0 +1,22 @@
+[
+    {
+        "model": "birdbox.sighting",
+        "pk": 1,
+        "fields": {
+            "bird": 1,
+            "location": 19,
+            "watcher": 1,
+            "sighted": "2021-01-01"
+        }
+    },
+    {
+        "model": "birdbox.sighting",
+        "pk": 2,
+        "fields": {
+            "bird": 2,
+            "location": 12,
+            "watcher": 1,
+            "sighted": "2021-01-23"
+        }
+    }
+]

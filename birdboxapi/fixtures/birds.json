@@ -1,0 +1,92 @@
+[
+    {
+        "model": "birdbox.bird",
+        "pk": 1,
+        "fields": {
+            "common_name": 1,
+            "location": 1,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/305837251-1280px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 2,
+        "fields": {
+            "common_name": 2,
+            "location": 3,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/og/75362951-1200px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 3,
+        "fields": {
+            "common_name": 3,
+            "location": 19,
+            "bird_img": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sayornis_phoebe_-Owen_Conservation_Park%2C_Madison%2C_Wisconsin%2C_USA-8.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 4,
+        "fields": {
+            "common_name": 4,
+            "location": 18,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/296766141-480px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 5,
+        "fields": {
+            "common_name": 5,
+            "location": 15,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/297900561-720px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 6,
+        "fields": {
+            "common_name": 6,
+            "location": 1,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/297087591-720px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 7,
+        "fields": {
+            "common_name": 7,
+            "location": 4,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/303441381-720px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 8,
+        "fields": {
+            "common_name": 8,
+            "location": 12,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/304957351-720px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 9,
+        "fields": {
+            "common_name": 9,
+            "location": 9,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/306327341-1280px.jpg"
+        }
+    },
+    {
+        "model": "birdbox.bird",
+        "pk": 10,
+        "fields": {
+            "common_name": 10,
+            "location": 6,
+            "bird_img": "https://www.allaboutbirds.org/guide/assets/photo/70610211-1280px.jpg"
+        }
+    }
+]

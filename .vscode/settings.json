@@ -1,0 +1,19 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "BirdBoxSQL",
+            "database": "db.sqlite3"
+        }
+    ],
+    "cSpell.words": [
+        "Animalia",
+        "birdbox",
+        "birdboxapi",
+        "Chordata",
+        "Pelecaniformes"
+    ]
+}
