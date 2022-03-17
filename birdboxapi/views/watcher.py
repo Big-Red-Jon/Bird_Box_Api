@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from birdboxapi.models import Watcher, Location
+from django.contrib.auth.models import User
 
 
 class WatcherView(ViewSet):
@@ -34,8 +35,15 @@ class LocationSerializer(serializers.ModelSerializer):
         fields = ('id', 'region', 'state', 'country')
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'username')
+
+
 class WatcherSerializer(serializers.ModelSerializer):
     region_id = LocationSerializer(many=False)
+    user = UserSerializer(many=False)
 
     class Meta:
         model = Watcher
