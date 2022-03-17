@@ -12,6 +12,12 @@ class Sighting(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
+    #  bird = models.ManyToManyField(
+    #     Bird,
+    #     verbose_name="Bird",
+    #     null=True,
+    #     on_delete=models.SET_NULL
+    # )
     location = models.ForeignKey(
         Location,
         verbose_name="Location",

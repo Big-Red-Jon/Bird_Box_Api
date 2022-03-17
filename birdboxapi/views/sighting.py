@@ -6,10 +6,7 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
-from birdboxapi.models import Sighting
-from birdboxapi.models import Watcher
-from birdboxapi.models import Location
-from birdboxapi.models import Bird
+from birdboxapi.models import Sighting, Bird, Watcher, Location, Taxonomy
 
 
 class SightingView(ViewSet):
@@ -91,22 +88,40 @@ class SightingView(ViewSet):
         return Response(serializer.data)
 
 
-class BirdSerializer(serializers.ModelSerializer):
+class TaxonomySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Bird
-        fields = ("id", "common_name", "location", "bird_img")
+        model = Taxonomy
+        fields = ('id', 'Kingdom', 'Phylum', 'Class', 'Order',
+                  'Family', 'Genus', 'Species', 'CommonName')
 
 
 class LocationSerializer(serializers.ModelSerializer):
-
     class Meta:
         model = Location
         fields = ('id', 'region', 'state', 'country')
 
 
+class BirdSerializer(serializers.ModelSerializer):
+    common_name = TaxonomySerializer(many=False)
+    location = LocationSerializer(many=False)
+
+    class Meta:
+        model = Bird
+        fields = ("id", "common_name", "location", "bird_img")
+
+
+class WatcherSerializer(serializers.ModelSerializer):
+    region_id = LocationSerializer(many=False)
+
+    class Meta:
+        model = Watcher
+        fields = ('id', 'profile_image_url', 'age', 'region_id', 'created_on')
+
+
 class SightingSerializer(serializers.ModelSerializer):
     bird = BirdSerializer(many=False)
     location = LocationSerializer(many=False)
+    watcher = WatcherSerializer(many=False)
 
     class Meta:
         model = Sighting
