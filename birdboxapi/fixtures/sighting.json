@@ -15,7 +15,7 @@
         "fields": {
             "bird": 2,
             "location": 12,
-            "watcher": 2,
+            "watcher": 1,
             "sighted": "2021-01-23"
         }
     }

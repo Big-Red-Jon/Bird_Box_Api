@@ -12,6 +12,10 @@ class Bird(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
+    #  location = models.ManyToManyField(
+    #     Location,
+    #     related_name="state",
+    # )
     location = models.ForeignKey(
         Location,
         verbose_name="Region",

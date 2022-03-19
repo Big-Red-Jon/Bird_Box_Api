@@ -15,7 +15,7 @@ class SightingView(ViewSet):
     def create(self, request):
 
         watcher = Watcher.objects.get(user=request.auth.user)
-        # possible error with line above
+
         location = Location.objects.get(pk=request.data["location"])
         bird = Bird.objects.get(pk=request.data["bird"])
 
@@ -44,15 +44,15 @@ class SightingView(ViewSet):
 
     def update(self, request, pk=None):
 
-        watcher = Watcher.objects.get(user=request.auth.user)
-        location = Location.objects.get(pk=request.data["location"])
-        bird = Bird.objects.get(pk=request.data["bird"])
-
         sighting = Sighting.objects.get(pk=pk)
-        sighting.bird = bird
-        sighting.location = location
         sighting.sighted = request.data["sighted"]
+
+        watcher = Watcher.objects.get(user=request.auth.user)
         sighting.watcher = watcher
+        location = Location.objects.get(pk=request.data["location"])
+        sighting.location = location
+        bird = Bird.objects.get(pk=request.data["bird"])
+        sighting.bird = bird
         sighting.save()
 
         return Response({}, status=status.HTTP_204_NO_CONTENT)
@@ -73,17 +73,17 @@ class SightingView(ViewSet):
     def list(self, request):
         sightings = Sighting.objects.all()
 
-        # location = self.request.query_params.get('type', None)
-        # if location is not None:
-        #     sightings = sightings.filter(location_id=location)
+        location = self.request.query_params.get('type', None)
+        if location is not None:
+            sightings = sightings.filter(location_id=location)
 
-        # bird = self.request.query_params.get('type', None)
-        # if bird is not None:
-        #     sightings = sightings.filter(bird_id=bird)
+        bird = self.request.query_params.get('type', None)
+        if bird is not None:
+            sightings = sightings.filter(bird_id=bird)
 
-        # watcher = self.request.query_params.get('type', None)
-        # if watcher is not None:
-        #     watcher = sightings.filter(watcher_id=watcher)
+        watcher = self.request.query_params.get('type', None)
+        if watcher is not None:
+            watcher = sightings.filter(watcher_id=watcher)
 
         serializer = SightingSerializer(
             sightings, many=True, context={'request': request})

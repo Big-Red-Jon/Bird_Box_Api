@@ -3,15 +3,15 @@ from django.contrib.auth.models import User
 from .location import Location
 
 
-# user, img, age, regionId, BirdSightedID, Active
-
-
 class Watcher(models.Model):
 
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE
     )
+    # sighting_watcher = models.ManyToManyField(
+    #     Sighting, related_name=("sighting"))
+
     profile_image_url = models.URLField(
         null=True,
         max_length=500

@@ -10,35 +10,41 @@ from rest_framework import serializers
 from rest_framework import status
 from birdboxapi.models import Watcher, Location, Sighting
 from django.contrib.auth.models import User
+from rest_framework.decorators import api_view
 from .sighting import SightingSerializer
 
 
-class WatcherView(ViewSet):
+@api_view(['GET'])
+def get_watcher_profile(request):
+    watcher = request.auth.user.watcher
+    serializer = WatcherSerializer(watcher)
 
-    def retrieve(self, request, pk=None):
-        try:
-            watcher = Watcher.objects.get(pk=pk)
-            serializer = WatcherSerializer(
-                watcher, context={'request': request})
-            return Response(serializer.data)
-        except Exception as ex:
-            return HttpResponseServerError(ex)
+    return Response(serializer.data)
 
-    def list(self, request):
-        watcher = Watcher.objects.all()
-        watcher = WatcherSerializer(
-            watcher, many=True, context={'request': request})
+    # def retrieve(self, request, pk=None):
+    #     try:
+    #         watcher = Watcher.objects.get(pk=pk)
+    #         serializer = WatcherSerializer(
+    #             watcher, context={'request': request})
+    #         return Response(serializer.data)
+    #     except Exception as ex:
+    #         return HttpResponseServerError(ex)
 
-        profile = {}
-        profile["watcher"] = watcher.data
-        return Response(profile)
+    # def list(self, request):
+    #     watcher = Watcher.objects.all()
+    #     watcher = WatcherSerializer(
+    #         watcher, many=True, context={'request': request})
 
-    @action(methods=["GET"], detail=True)
-    def sightings(self, request, pk=None):
-        watcher_sightings = Sighting.objects.filter(watcher=pk)
-        serializer = SightingSerializer(watcher_sightings, context={
-                                        'request: request'}, many=True)
-        return Response(serializer.data)
+    #     profile = {}
+    #     profile["watcher"] = watcher.data
+    #     return Response(profile)
+
+    # @action(methods=["GET"], detail=True)
+    # def sightings(self, request, pk=None):
+    #     watcher_sightings = Sighting.objects.filter(watcher=pk)
+    #     serializer = SightingSerializer(watcher_sightings, context={
+    #                                     'request: request'}, many=True)
+    #     return Response(serializer.data)
 
 
 class LocationSerializer(serializers.ModelSerializer):
