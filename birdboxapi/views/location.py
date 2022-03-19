@@ -18,10 +18,9 @@ class LocationView(ViewSet):
             return HttpResponseServerError(ex)
 
     def list(self, request):
-        location = Location.objects.all()
+        locations = Location.objects.all()
         serializer = LocationSerializer(
-            location, context={'request': request})
-
+            locations, many=True, context={'request': request})
         return Response(serializer.data)
 
 

@@ -19,7 +19,7 @@ class Watcher(models.Model):
     age = models.CharField(
         max_length=5,
     )
-    region_id = models.ForeignKey(
+    region = models.ForeignKey(
         Location,
         verbose_name="Location",
         null=True,

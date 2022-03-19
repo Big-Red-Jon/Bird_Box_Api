@@ -7,6 +7,7 @@ from rest_framework.response import Response
 from rest_framework import serializers
 from rest_framework import status
 from birdboxapi.models import Sighting, Bird, Watcher, Location, Taxonomy
+from django.contrib.auth.models import User
 
 
 class SightingView(ViewSet):
@@ -14,8 +15,9 @@ class SightingView(ViewSet):
     def create(self, request):
 
         watcher = Watcher.objects.get(user=request.auth.user)
-        location = Location.objects.get(pk=request.data["locationId"])
-        bird = Bird.objects.get(pk=request.data["birdId"])
+        # possible error with line above
+        location = Location.objects.get(pk=request.data["location"])
+        bird = Bird.objects.get(pk=request.data["bird"])
 
         sighting = Sighting()
         sighting.bird = bird
@@ -43,8 +45,8 @@ class SightingView(ViewSet):
     def update(self, request, pk=None):
 
         watcher = Watcher.objects.get(user=request.auth.user)
-        location = Location.objects.get(pk=request.data["locationId"])
-        bird = Bird.objects.get(pk=request.data["birdId"])
+        location = Location.objects.get(pk=request.data["location"])
+        bird = Bird.objects.get(pk=request.data["bird"])
 
         sighting = Sighting.objects.get(pk=pk)
         sighting.bird = bird
@@ -110,12 +112,20 @@ class BirdSerializer(serializers.ModelSerializer):
         fields = ("id", "common_name", "location", "bird_img")
 
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'username')
+
+
 class WatcherSerializer(serializers.ModelSerializer):
-    region_id = LocationSerializer(many=False)
+    region = LocationSerializer(many=False)
+    user = UserSerializer(many=False)
 
     class Meta:
         model = Watcher
-        fields = ('id', 'profile_image_url', 'age', 'region_id', 'created_on')
+        fields = ('id', 'user', 'profile_image_url',
+                  'age', 'region', 'created_on')
 
 
 class SightingSerializer(serializers.ModelSerializer):
