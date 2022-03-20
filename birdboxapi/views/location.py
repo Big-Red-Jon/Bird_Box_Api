@@ -3,6 +3,15 @@ from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
 from birdboxapi.models import Location
+from rest_framework.decorators import api_view
+
+
+# @api_view(['GET'])
+# def get_location_array(request):
+#     watcher = request.auth.user.watcher
+#     serializer = LocationSerializer(watcher)
+
+#     return Response(serializer.data)
 
 
 class LocationView(ViewSet):

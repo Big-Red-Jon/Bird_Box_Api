@@ -105,7 +105,7 @@ class LocationSerializer(serializers.ModelSerializer):
 
 class BirdSerializer(serializers.ModelSerializer):
     common_name = TaxonomySerializer(many=False)
-    location = LocationSerializer(many=False)
+    location = LocationSerializer(many=True)
 
     class Meta:
         model = Bird
