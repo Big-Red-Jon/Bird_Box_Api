@@ -12,22 +12,11 @@ class Bird(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
-    #  location = models.ManyToManyField(
-    #     Location,
-    #     related_name="state",
-    # )
-    location = models.ForeignKey(
+    location = models.ManyToManyField(
         Location,
-        verbose_name="Region",
-        null=True,
-        on_delete=models.SET_NULL
+        related_name="location",
     )
-    # song = models.ForeignKey(
-    #     Song,
-    #     verbose_name="Song",
-    #     null=True,
-    #     on_delete=models.SET_NULL
-    # )
+
     bird_img = models.URLField(
         null=True,
         max_length=500
