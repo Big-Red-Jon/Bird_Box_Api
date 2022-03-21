@@ -4,6 +4,8 @@ from rest_framework import serializers
 
 from birdboxapi.models import img
 
+# Incomplete Feature for Later
+
 
 class UploadViewSet(ViewSet):
 
