@@ -49,6 +49,7 @@ class SightingView(ViewSet):
 
         watcher = Watcher.objects.get(user=request.auth.user)
         sighting.watcher = watcher
+
         location = Location.objects.get(pk=request.data["location"])
         sighting.location = location
         bird = Bird.objects.get(pk=request.data["bird"])

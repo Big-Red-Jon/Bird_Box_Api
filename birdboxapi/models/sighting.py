@@ -24,6 +24,7 @@ class Sighting(models.Model):
         null=True,
         on_delete=models.SET_NULL
     )
+
     sighted = models.DateTimeField()
 
     class Meta:

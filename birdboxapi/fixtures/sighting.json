@@ -16,7 +16,27 @@
             "bird": 2,
             "location": 12,
             "watcher": 1,
+            "sighted": "2021-05-23"
+        }
+    },
+    {
+        "model": "birdbox.sighting",
+        "pk": 3,
+        "fields": {
+            "bird": 9,
+            "location": 13,
+            "watcher": 1,
             "sighted": "2021-01-23"
+        }
+    },
+    {
+        "model": "birdbox.sighting",
+        "pk": 4,
+        "fields": {
+            "bird": 8,
+            "location": 8,
+            "watcher": 1,
+            "sighted": "2021-03-23"
         }
     }
 ]
