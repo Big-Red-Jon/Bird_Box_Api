@@ -21,6 +21,7 @@ class Bird(models.Model):
         null=True,
         max_length=500
     )
+    
 
     class Meta:
         app_label = "birdbox"

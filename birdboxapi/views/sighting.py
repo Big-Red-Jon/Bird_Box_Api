@@ -13,7 +13,8 @@ from django.contrib.auth.models import User
 class SightingView(ViewSet):
 
     def create(self, request):
-
+        # import pdb
+        # pdb.set_trace()
         watcher = Watcher.objects.get(user=request.auth.user)
 
         location = Location.objects.get(pk=request.data["location"])
@@ -43,7 +44,8 @@ class SightingView(ViewSet):
             return HttpResponseServerError(ex)
 
     def update(self, request, pk=None):
-
+        import pdb
+        pdb.set_trace()
         sighting = Sighting.objects.get(pk=pk)
         sighting.sighted = request.data["sighted"]
 
